@@ -1,34 +1,33 @@
-# Job-Market Research Report — Business & Data Analyst Roles
+# Excel Data Cleaning & Summary — Messy Sales File
 
 **Author:** Licia Soyinka
-**Project:** Week 1 — The Analyst Accelerator
-**Tools used:** Microsoft Excel (data collection, analysis, and charting)
+**Project:** Week 2 — The Analyst Accelerator
+**Tool used:** Microsoft Excel
 
 ---
 
-## The Question
-As someone training to become an analyst, I wanted to answer a practical question:
-**"Which skills and tools do employers most want for Business Analyst and Data Analyst roles — so I can prioritize my learning?"**
-I treated the job market itself as a dataset.
+## The Task
+A messy sales export needed to be cleaned and summarized so the team could trust the numbers. This project shows the full workflow: clean the data, document every change, then summarize the key results.
 
-## Method
-1. Collected **11 real job postings** (a mix of Business Analyst and Data Analyst roles) from LinkedIn and Indeed.
-2. Recorded each posting's title, company, seniority, required skills, tools, years of experience, and salary in a spreadsheet.
-3. Tallied how often each skill and tool appeared across all postings.
-4. Built a **Top-10 bar chart** to visualize the most-requested skills.
+## Cleaning Log (every change I made)
+1. **Removed duplicate rows** — 2 exact duplicates removed (15 rows → 13 unique orders).
+2. **Trimmed extra spaces + fixed capitalization** on customer names using `=PROPER(TRIM(name))` (e.g., `"  aisha bello "` → `"Aisha Bello"`).
+3. **Standardized region capitalization** using `=PROPER(region)` (e.g., `EAST`, `north`, `west` → `East`, `North`, `West`).
+4. **Split full names** into First Name and Last Name using **Text to Columns**.
+5. **Added conditional formatting** to highlight high-value orders (Revenue > $500) in green.
 
-## Key Findings
-- **The "big three" tools dominate:** SQL (7 of 11), Power BI (6 of 11), and Excel (4 of 11).
-- **Cloud is rising:** Azure / cloud platforms appeared in 4 of 11 postings.
-- **Soft skills matter:** communication and stakeholder collaboration showed up in 4 of 11 postings; requirements analysis in 3.
-- **Salaries ranged from about $70,000 to $120,000**, which confirms my target of **$80,000–$100,000 is realistic** for these roles.
-- **The roles blend BA and DA work.** The overall skill set leans toward **Data Analyst**, but business-analysis skills (requirements, stakeholder communication) appear frequently too.
+## Key Findings (after cleaning)
+- **13 unique orders** (after removing duplicates).
+- **Total revenue:** $4,805.
+- **Average order value:** ~$369.62.
+- **Top regions by revenue:** North ($1,530) and East ($1,290).
+- **4 high-value orders** (over $500) — all Laptops or a large Monitor order.
 
-## Recommendation
-I will prioritize the **big three — SQL, Power BI, and Excel** — first, since they appear in the most postings and unlock the widest range of jobs. After that, I'll add **Azure / cloud basics** and keep strengthening **communication**. I'll continue building both data and business-analysis skills so I stay flexible across analyst roles.
+## Why Cleaning Mattered
+Before cleaning, the same customer appeared as "JOHN SMITH", "John Smith", and "  john smith " — which would have split one person into three in any grouping. Standardizing the data first is what makes the regional totals (SUMIF) correct and trustworthy.
 
 ## Files in this project
-- `01_job_market_skills_matrix.xlsx` — the full dataset of 11 postings, the skills tally, and the Top-10 chart.
+- `week02_sales_cleanup.xlsx` — cleaned data, conditional formatting, and the summary block.
 
 ---
-*This was my first portfolio project, completed in Week 1 of my analyst training. It demonstrates the full analyst loop: turning a vague question into structured data, finding a pattern, and making a clear, evidence-based recommendation.*
+*Week 2 portfolio project. Demonstrates real-world data cleaning (duplicates, spaces, capitalization, splitting fields), documentation (cleaning log), and summarizing with functions (SUM, AVERAGE, COUNT, SUMIF).*
