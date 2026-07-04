@@ -1,33 +1,36 @@
-# Excel Data Cleaning & Summary — Messy Sales File
+# Interactive Sales Dashboard (Excel)
 
 **Author:** Licia Soyinka
-**Project:** Week 2 — The Analyst Accelerator
-**Tool used:** Microsoft Excel
+**Project:** Week 3 — The Analyst Accelerator
+**Tools used:** Microsoft Excel — PivotTable, PivotChart, and Slicers
 
 ---
 
-## The Task
-A messy sales export needed to be cleaned and summarized so the team could trust the numbers. This project shows the full workflow: clean the data, document every change, then summarize the key results.
+## What This Is
+An interactive one-screen sales dashboard a manager can explore themselves — no analyst needed for every question. Built from a clean sales dataset (15 orders across 4 regions and 5 products, Jan–March 2026).
 
-## Cleaning Log (every change I made)
-1. **Removed duplicate rows** — 2 exact duplicates removed (15 rows → 13 unique orders).
-2. **Trimmed extra spaces + fixed capitalization** on customer names using `=PROPER(TRIM(name))` (e.g., `"  aisha bello "` → `"Aisha Bello"`).
-3. **Standardized region capitalization** using `=PROPER(region)` (e.g., `EAST`, `north`, `west` → `East`, `North`, `West`).
-4. **Split full names** into First Name and Last Name using **Text to Columns**.
-5. **Added conditional formatting** to highlight high-value orders (Revenue > $500) in green.
+## What It Shows
+- **KPI strip:** Total Revenue **$6,265**, Average Order **~$418**, **15** orders.
+- **Chart:** Revenue by Region (built with a PivotChart).
+- **Two slicers:** **Region** and **Product** — click any button and the chart updates instantly.
 
-## Key Findings (after cleaning)
-- **13 unique orders** (after removing duplicates).
-- **Total revenue:** $4,805.
-- **Average order value:** ~$369.62.
-- **Top regions by revenue:** North ($1,530) and East ($1,290).
-- **4 high-value orders** (over $500) — all Laptops or a large Monitor order.
+## How to Use It
+- Click a **Region** button to focus on one region.
+- Click a **Product** button (e.g., Laptop) to see *which regions* buy that product most.
+- Click the clear-filter icon on a slicer to reset.
 
-## Why Cleaning Mattered
-Before cleaning, the same customer appeared as "JOHN SMITH", "John Smith", and "  john smith " — which would have split one person into three in any grouping. Standardizing the data first is what makes the regional totals (SUMIF) correct and trustworthy.
+## Key Insights
+- **West** is the top region by revenue (~$2,575), followed by **North** (~$1,680), **East** (~$1,440), and **South** (~$570).
+- **Laptops** drive the largest share of revenue across regions.
 
-## Files in this project
-- `week02_sales_cleanup.xlsx` — cleaned data, conditional formatting, and the summary block.
+## How I Built It
+1. Loaded the clean data and inserted a **PivotChart** (Revenue by Region).
+2. Added **Region** and **Product slicers** connected to the chart's PivotTable so one click filters everything.
+3. Added a title and a **KPI strip** for the headline numbers.
+
+## Files
+- `week03_sales_dashboard.xlsx` — the interactive dashboard.
+- `dashboard.png` — a screenshot of the dashboard (optional).
 
 ---
-*Week 2 portfolio project. Demonstrates real-world data cleaning (duplicates, spaces, capitalization, splitting fields), documentation (cleaning log), and summarizing with functions (SUM, AVERAGE, COUNT, SUMIF).*
+*Week 3 portfolio project. Demonstrates PivotTables, PivotCharts, slicers, and dashboard design — turning raw data into a self-serve, interactive report.*
