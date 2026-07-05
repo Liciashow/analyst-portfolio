@@ -1,36 +1,38 @@
-# Interactive Sales Dashboard (Excel)
+# SQL Business Questions
 
 **Author:** Licia Soyinka
-**Project:** Week 3 — The Analyst Accelerator
-**Tools used:** Microsoft Excel — PivotTable, PivotChart, and Slicers
+**Project:** Week 4 — The Analyst Accelerator
+**Tool used:** SQL (SQL Server dialect), practiced on the W3Schools sample database
 
 ---
 
 ## What This Is
-An interactive one-screen sales dashboard a manager can explore themselves — no analyst needed for every question. Built from a clean sales dataset (15 orders across 4 regions and 5 products, Jan–March 2026).
+A set of 8 SQL queries that answer real business questions about customers, orders, and products — the kind of questions a manager asks and an analyst answers directly from the database (no exporting to Excel needed).
 
-## What It Shows
-- **KPI strip:** Total Revenue **$6,265**, Average Order **~$418**, **15** orders.
-- **Chart:** Revenue by Region (built with a PivotChart).
-- **Two slicers:** **Region** and **Product** — click any button and the chart updates instantly.
+## The Questions Answered
+1. How many customers are there in total?
+2. How many customers are in each country?
+3. Which countries have more than 5 customers?
+4. What are the top 5 most expensive products?
+5. Each order shown with the customer's name (a JOIN).
+6. The top 5 customers by number of orders (JOIN + GROUP BY + ORDER BY).
+7. The average product price in each category.
+8. Customers whose name starts with 'A'.
 
-## How to Use It
-- Click a **Region** button to focus on one region.
-- Click a **Product** button (e.g., Laptop) to see *which regions* buy that product most.
-- Click the clear-filter icon on a slicer to reset.
+## SQL Skills Demonstrated
+- `SELECT`, `WHERE`, `LIKE`
+- `ORDER BY` + `TOP` (SQL Server's version of LIMIT)
+- Aggregates: `COUNT`, `AVG`
+- `GROUP BY` and `HAVING`
+- `INNER JOIN` with table aliases
 
-## Key Insights
-- **West** is the top region by revenue (~$2,575), followed by **North** (~$1,680), **East** (~$1,440), and **South** (~$570).
-- **Laptops** drive the largest share of revenue across regions.
-
-## How I Built It
-1. Loaded the clean data and inserted a **PivotChart** (Revenue by Region).
-2. Added **Region** and **Product slicers** connected to the chart's PivotTable so one click filters everything.
-3. Added a title and a **KPI strip** for the headline numbers.
+## Key Findings (from the sample database)
+- A handful of countries have more than 5 customers (e.g., USA, Germany, France, Brazil, UK).
+- The most expensive product is Côte de Blaye.
+- Combining a JOIN with GROUP BY reveals the most frequent customers by order count.
 
 ## Files
-- `week03_sales_dashboard.xlsx` — the interactive dashboard.
-- `dashboard.png` — a screenshot of the dashboard (optional).
+- `week04_business_questions.sql` — all 8 commented queries.
 
 ---
-*Week 3 portfolio project. Demonstrates PivotTables, PivotCharts, slicers, and dashboard design — turning raw data into a self-serve, interactive report.*
+*Week 4 portfolio project. Demonstrates the full core of SQL — filtering, sorting, aggregating, grouping, and joining tables — to answer business questions directly from a database.*
