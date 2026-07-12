@@ -1,38 +1,38 @@
-# SQL Business Questions
+# Intermediate SQL Analysis
 
 **Author:** Licia Soyinka
-**Project:** Week 4 — The Analyst Accelerator
+**Project:** Week 5 — The Analyst Accelerator
 **Tool used:** SQL (SQL Server dialect), practiced on the W3Schools sample database
 
 ---
 
 ## What This Is
-A set of 8 SQL queries that answer real business questions about customers, orders, and products — the kind of questions a manager asks and an analyst answers directly from the database (no exporting to Excel needed).
+A set of 8 intermediate SQL queries that go beyond basic pulls into real analysis — finding gaps, comparing to averages, bucketing with logic, and summarizing across joined tables.
 
 ## The Questions Answered
-1. How many customers are there in total?
-2. How many customers are in each country?
-3. Which countries have more than 5 customers?
-4. What are the top 5 most expensive products?
-5. Each order shown with the customer's name (a JOIN).
-6. The top 5 customers by number of orders (JOIN + GROUP BY + ORDER BY).
-7. The average product price in each category.
-8. Customers whose name starts with 'A'.
+1. Customers who have **never** placed an order (LEFT JOIN + IS NULL).
+2. Products priced **above the average** (subquery).
+3. Each product tagged **High / Medium / Low** by price (CASE).
+4. Customers who **have** placed an order (IN subquery).
+5. Number of **orders per shipper** (JOIN + GROUP BY).
+6. Count of products in each **price tier** (CASE + GROUP BY).
+7. Each order with **customer + shipper** (3-table JOIN).
+8. Countries with **more than 5 customers** (GROUP BY + HAVING).
 
 ## SQL Skills Demonstrated
-- `SELECT`, `WHERE`, `LIKE`
-- `ORDER BY` + `TOP` (SQL Server's version of LIMIT)
-- Aggregates: `COUNT`, `AVG`
-- `GROUP BY` and `HAVING`
-- `INNER JOIN` with table aliases
+- **LEFT JOIN** + `IS NULL` (finding rows with no match)
+- **Multi-table JOINs** (3 tables) with aliases
+- **Subqueries** in WHERE, and **IN** subqueries
+- **CASE** for conditional bucketing (price tiers)
+- **GROUP BY / HAVING** and aggregates
 
-## Key Findings (from the sample database)
-- A handful of countries have more than 5 customers (e.g., USA, Germany, France, Brazil, UK).
-- The most expensive product is Côte de Blaye.
-- Combining a JOIN with GROUP BY reveals the most frequent customers by order count.
+## Key Findings (sample database)
+- A handful of customers have never ordered (useful for a re-engagement campaign).
+- Only 2 products are "High" tier (>= $100); most are Medium or Low.
+- Orders are split across 3 shippers (roughly 68 / 54 / 74).
 
 ## Files
-- `week04_business_questions.sql` — all 8 commented queries.
+- `week05_sql_analysis.sql` — all 8 commented queries.
 
 ---
-*Week 4 portfolio project. Demonstrates the full core of SQL — filtering, sorting, aggregating, grouping, and joining tables — to answer business questions directly from a database.*
+*Week 5 portfolio project. Demonstrates intermediate SQL — multiple JOIN types, subqueries, and CASE — to answer analysis-level business questions.*
