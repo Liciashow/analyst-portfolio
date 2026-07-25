@@ -19,12 +19,12 @@ Each project is based on a realistic business question, with clean, well-comment
 
 | # | Project | What it shows | Skills | Link |
 |---|---------|---------------|--------|------|
-| 1 | Job Market Skills Matrix | Researched in-demand analyst skills and mapped them to a learning plan | Excel, research | [View](01_job_market_skills_matrix.xlsx) |
-| 2 | Sales Data Cleanup | Cleaned messy sales data into a reliable, analysis-ready table | Excel, data cleaning | [View](week02_sales_cleanup.xlsm) |
-| 3 | Sales Dashboard | Interactive dashboard with PivotTables, slicers, and Power Query | Excel, PivotTables, Power Query | [View](week03_sales_dashboard.xlsx) · [Preview](dashboard.png) |
-| 4 | SQL Business Questions | Answered business questions with SELECT, WHERE, ORDER BY, and JOINs | SQL fundamentals | [View](week04_business_questions.sql) |
-| 5 | Intermediate SQL Analysis | JOIN types, subqueries, CASE, and GROUP BY / HAVING | Intermediate SQL | [View](week05_sql_analysis.sql) |
-| 6 | Advanced SQL Analysis | Window functions, CTEs, running totals, and query best practices | Advanced SQL | [View](week06_advanced_sql.sql) |
+| 1 | Job Market Skills Matrix | Researched in-demand analyst skills and mapped them to a learning plan | Excel, research | [View](week-01-job-market-research/) |
+| 2 | Sales Data Cleanup | Cleaned messy sales data into a reliable, analysis-ready table | Excel, data cleaning | [View](week-02-excel-cleanup/) |
+| 3 | Sales Dashboard | Interactive dashboard with PivotTables, slicers, and Power Query | Excel, PivotTables, Power Query | [View](week-03-excel-dashboard/) |
+| 4 | SQL Business Questions | Answered business questions with SELECT, WHERE, ORDER BY, and JOINs | SQL fundamentals | [View](week-04-sql-queries/) |
+| 5 | Intermediate SQL Analysis | JOIN types, subqueries, CASE, and GROUP BY / HAVING | Intermediate SQL | [View](week-05-sql-analysis/) |
+| 6 | Advanced SQL Analysis | Window functions, CTEs, running totals, and query best practices | Advanced SQL | [View](week-06-advanced-sql/) |
 
 ---
 
