@@ -27,7 +27,7 @@ Each table was loaded with **Get Data** and shaped in **Power Query**: promoting
 
 ## 🖼️ The Model (star schema)
 
-![Power BI Model](powerbi_model.png)
+![Power BI Model](Powerbi_model.png)
 
 ## 🧰 Built with
 
