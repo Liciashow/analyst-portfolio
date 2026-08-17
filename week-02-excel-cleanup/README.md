@@ -1,7 +1,7 @@
-# Excel Data Cleaning & Summary — Messy Sales File
+# Excel Data Cleaning & Summary - Messy Sales File
 
 **Author:** Licia Soyinka
-**Project:** Week 2 — The Analyst Accelerator
+**Project:** Week 2 - The Analyst Accelerator
 **Tool used:** Microsoft Excel
 
 ---
